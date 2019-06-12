@@ -44,4 +44,4 @@ class EmailspiderSpider(scrapy.Spider):
         return re.findall(r'[\w\.-]+@[\w\.-]+', html_as_str)
 
     def extract_phone_number(self, html_as_str):
-        return re.findall(r'\+\d{2}\s?0?\d{10}', html_as_str)
+        return re.findall(r'\(\d{2}\)\s?0?\d{4}\-\d{4}', html_as_str)
